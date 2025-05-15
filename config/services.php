@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'monopoly' => [
+        'base_url' => env('MONOPOLY_API_URL', 'localhost'),
+        'api_key'  => env('MONOPOLY_API_KEY'),
+    ]
 ];
