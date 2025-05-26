@@ -38,5 +38,11 @@ return [
     'monopoly' => [
         'base_url' => env('MONOPOLY_API_URL', 'localhost'),
         'api_key'  => env('MONOPOLY_API_KEY'),
+    ],
+
+    'gas_station' => [
+        'base_url'      => env('GAS_API_URL', 'localhost'),
+        'client_id'     => env('GAS_API_KEY'),
+        'client_secret' => env('GAS_API_SECRET'),
     ]
 ];
