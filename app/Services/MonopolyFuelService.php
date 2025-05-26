@@ -218,22 +218,4 @@ class MonopolyFuelService
             type:      $data['type'],
         );
     }
-
-    /**
-     * Отправка статуса заказа
-     *
-     * @param  string              $externalUrl
-     * @param  string              $orderId
-     * @param  array               $statusPayload
-     * @return bool
-     * @throws ConnectionException
-     */
-    public function sendOrderStatusToExternal(string $externalUrl, string $orderId, array $statusPayload): bool
-    {
-        $this->handleRequest(fn() => Http::withHeaders([
-            'X-Api-Key' => $this->apiKey,
-        ])->acceptJson()->put("{$externalUrl}/{$orderId}", $statusPayload));
-
-        return true;
-    }
 }
