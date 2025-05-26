@@ -105,10 +105,10 @@ class GasStationService
 
         return collect($response->json())->map(function ($item) {
             return new FuelPriceModel(
-                stationId: $item['station_id'],
-                fuelType: FuelTypeEnum::from($item['fuel_type']),
-                fuelPrice: (float) $item['price'],
-                serviceMethod: ServiceMethodEnum::Online // Допустим, все цены относятся к заправке у ТРК
+                stationId:     $item['station_id'],
+                fuelType:      FuelTypeEnum::from($item['fuel_type']),
+                fuelPrice:     (float) $item['price'],
+                serviceMethod: ServiceMethodEnum::Online
             );
         });
     }
